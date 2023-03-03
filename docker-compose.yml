@@ -1,0 +1,29 @@
+version: "3"
+services:
+  web: 
+    image: chattaporn/django:v4
+    ports: 
+      - '8800'
+    networks:
+      - webproxy
+    logging:
+      driver: json-file
+    deploy:
+      replicas: 1
+      labels:
+        - traefik.docker.network=webproxy
+        - traefik.enable=true
+        - traefik.http.routers.spcn07django-https.entrypoints=websecure
+        - traefik.http.routers.spcn07django-https.rule=Host("spcn07django.xops.ipv9.xyz")
+        - traefik.http.routers.spcn07django-https.tls.certresolver=default
+        - traefik.http.services.spcn07django.loadbalancer.server.port=80
+      resources:
+        reservations:
+          cpus: '0.1'
+          memory: 10M
+        limits:
+          cpus: '0.4'
+          memory: 50M
+networks:
+  webproxy:
+    external: true

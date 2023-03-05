@@ -7,7 +7,7 @@ Wakatime project
 - https://wakatime.com/@spcn07/projects/yajbpohslz?start=2023-02-27&end=2023-03-05
 
 Url django
-
+- https://spcn07django.xops.ipv9.xyz/
 
 
 ## ขั้นตอนการสร้าง

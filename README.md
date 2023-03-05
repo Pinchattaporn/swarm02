@@ -1,10 +1,21 @@
 # swarm02 django
+Ref. awaresome-compose
+    
+- https://github.com/docker/awesome-compose/tree/master/django
+
+Wakatime project
+- https://wakatime.com/@spcn07/projects/yajbpohslz?start=2023-02-27&end=2023-03-05
+
+Url django
+
+
 
 ## ขั้นตอนการสร้าง
  - [1.สร้างและใช้งาน Vm](#1สร้างและใช้งาน-vm)
- - 2.[Stack และ Portainer](#2.portainer)
- - 3.[Revert proxy](#3revert-proxy)
- - 4.[Create django](#4create-django)
+ - [2.Stack และ Portainer](#2portainer)
+ - [3.Revert proxy](#3revert-proxy)
+ - [4.Images On Dockerfile](#4images-on-dockerfile)
+ - [5.Create django](#4create-django)
 
  # 1.สร้างและใช้งาน Vm
 - สร้าง Vm เบื้องต้นได้ที่
@@ -102,13 +113,15 @@
     ![label](images/label.png)
 
     * ปรับเปลี่ยนข้อมูล traefik ก่อนที่จะ export
-
+        
+        ```
         export EMAIL=user@smtp.com
         export DOMAIN=traefik.cpedemo.local
         export USERNAME=admin
         export PASSWORD=changeMe
         export HASHED_PASSWORD=$(openssl passwd -apr1 $PASSWORD)
         echo $HASHED_PASSWORD
+        ```
     
     * ตัวอย่างการ set ข้อมูล
 
@@ -134,7 +147,10 @@
 
 - ดูผลลัพธ์ที่ Url
     * http://traefik.cpedemo.local
+    
     ![Dsh-traefik](images/Dsh-traefik.png)
+
+# 4.Images On Dockerfile
 
 
 

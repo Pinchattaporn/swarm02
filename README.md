@@ -27,16 +27,16 @@ Url django
         * HDD 32 GB
 
 - เมื่อสร้าง Vm เสร็จแล้วทำการ clone ออกมา 3  Node ได้แก่
-    * mannger (spcn-manager)
-    * work1 (spcn-worker1)
-    * work2 (spcn-worker2)
+    * mannger (spcn07manager)
+    * work1 (spcn07-worker1)
+    * work2 (spcn07-worker2)
 
 - ทำการ Set Hostname ใหม่ ด้วยคำสั่ง
     *  hostnamectl set-hostname " ชื่อชื่อใหม่ที่เราต้องการตั้ง"
         * hostname ใหม่ของดิฉัน ได้แก่
-            * spcn-manager
-            * spcn-worker1
-            * spcn-worker2
+            * spcn07-manager
+            * spcn07-worker1
+            * spcn07-worker2
 - เช็คเลข ip ไม่ให้ซ้ำกันเพื่อทำการ Remote ssh ที่ Vscode
     * ติดตั้ง Extension ที่เกี่ยวกับงาน(ssh,wakatime)
     * เชื่อม ssh ไปยัง Vm ที่เราจะทำ Remote ssh

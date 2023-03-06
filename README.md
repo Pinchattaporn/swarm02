@@ -27,7 +27,7 @@ Url django
         * HDD 32 GB
 
 - เมื่อสร้าง Vm เสร็จแล้วทำการ clone ออกมา 3  Node ได้แก่
-    * mannger (spcn07manager)
+    * mannger (spcn07-manager)
     * work1 (spcn07-worker1)
     * work2 (spcn07-worker2)
 

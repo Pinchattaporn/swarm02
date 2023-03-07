@@ -151,9 +151,16 @@ Url django
     ![Dsh-traefik](images/Dsh-traefik.png)
 
 # 4.Images On Dockerfile
+- build image จาก Dockerfile
 
+      docker build . -t  chattaporn/django:v4
+ 
+      โดย chattaporn/django:v4 คือ usernameDockerHub : tag
 
+- push image ขึ้น DockerHub
 
+        docker push chattaporn/django
+        
  # 5.Create django
 
 

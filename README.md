@@ -167,3 +167,6 @@ Url django
 
     <center><img src="images/django-ct.png" alt="center"></center>
 
+- ทำการแก้ไขข้อมูลไฟล์
+
+ยังเสร็จไม่สมบูรณ์ค่ะ

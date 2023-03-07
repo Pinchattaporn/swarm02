@@ -160,8 +160,10 @@ Url django
 - push image ขึ้น DockerHub
 
         docker push chattaporn/django
-        
+
  # 5.Create django
+- ทำการ Clone github จาก Ref.
+    * https://github.com/docker/awesome-compose/tree/master/django
 
-
+    <center><img src="images/django-ct.png" alt="center"></center>
 

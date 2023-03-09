@@ -189,8 +189,42 @@ Url django
 
  * ผลลัพธ์
 
-<center><img src="images/Dochub-django.png" alt="center"></center>
+    <center><img src="images/Dochub-django.png" alt="center"></center>
 
+- ทำการอนุญาติการเข้าถึงด้วย IP อื่น
+  * แก้ไขที่ไฟล์ settings.py 
 
+    <center><img src="images/IP.png" alt="center"></center>
 
-  
+- แก้ไขข้อมูล docker-compose.yaml
+
+    <center><img src="images/django-set.png"alt="center" ></center>
+
+- deploy stack
+
+    * https://portainer.ipv9.me/
+
+โดยทำการ กด Aff Stack -> ตั้งชื่อ django-spcn07 -> วางโค้ด docker- compose.yaml ที่ wab editor -> Deploy the stack
+
+<center><img src="images/stc-dj.png" alt="center"></center>
+
+<center><img src="images/detail.png" alt="center"></center>
+ 
+ - ผลลัพธ์จากการ deploy stack
+
+<center><img src="images/list-st.png" alt="center"></center>
+
+- เช็คว่า Url เข้าใช้งานได้จริงมั้ย แสดงผลจริงมั้ย
+    * https://spcn07django.xops.ipv9.xyz/
+
+ผลลัพธ์
+
+<center><img src="images/End.png" alt="center"></center>
+
+Ref.ทั้งหมด
+    
+* https://github.com/pitimon/dockerswarm-inhoure
+    
+* https://youtu.be/UGEs5P5pKZ8
+    
+ * https://github.com/docker/awesome-compose/tree/master/django

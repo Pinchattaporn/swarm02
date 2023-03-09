@@ -155,7 +155,8 @@ Url django
 
       docker build . -t  chattaporn/django:v4
  
-      โดย chattaporn/django:v4 คือ usernameDockerHub : tag
+
+โดย chattaporn/django:v4 คือ usernameDockerHub : tag
 
 - push image ขึ้น DockerHub
 
@@ -167,6 +168,29 @@ Url django
 
     <center><img src="images/django-ct.png" alt="center"></center>
 
-- ทำการแก้ไขข้อมูลไฟล์
+- ทำการแก้ไขข้อมูลไฟล์ compose.yaml
+    * แก้ไขเลข port จาก 8000 : 8000 เป็น 
+  <font color="red"> 8800 : 8000 </font>
+  <center><img src="images/com-django.png" alt="center"></center>
 
-ยังเสร็จไม่สมบูรณ์ค่ะ
+- build images
+    * โดยการเข้าที่ Docker hub -> Create repository -> ตั้ง Name = <font color="red"> django</font>
+
+    <center><img src="images/create-Repo.png"></center>
+
+ * copy path : chattaporn/django
+โดยใช้คำสั่ง
+     
+        docker build . -t chattaporn/django:v4
+
+ * push ขึ้น Dockerhub
+    * ใช้คำสั่ง docker login เพื่อเข้าสู่ระบบก่อน
+    * ใช้คำสั่ง docker push chattaporn/django:v4
+
+ * ผลลัพธ์
+
+<center><img src="images/Dochub-django.png" alt="center"></center>
+
+
+
+  

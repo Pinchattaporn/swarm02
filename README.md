@@ -194,7 +194,7 @@ Url django
 - ทำการอนุญาติการเข้าถึงด้วย IP อื่น
   * แก้ไขที่ไฟล์ settings.py 
 
-    <center><img src="images/IP.png"></center>
+    <center><img src="images/ip.png"></center>
 
 - แก้ไขข้อมูล docker-compose.yaml
 

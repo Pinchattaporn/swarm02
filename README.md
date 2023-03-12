@@ -30,9 +30,9 @@ Url django
   <center><img src="images/com-django.png" alt="center"></center>
 
 # **2.build Images On Dockerfile**
-    * โดยการเข้าที่ Docker hub -> Create repository -> ตั้ง Name = <font color="red"> django</font>
+* โดยการเข้าที่ Docker hub -> Create repository -> ตั้ง Name = <font color="red"> django</font>
 
-    <center><img src="images/create-Repo.png"></center>
+<center><img src="images/create-Repo.png"></center>
 
  * copy path : chattaporn/django
 โดยใช้คำสั่ง
@@ -56,7 +56,43 @@ Url django
 
 - แก้ไขข้อมูล docker-compose.yaml
 
-    <center><img src="images/django-set.png"alt="center" ></center>
+<details>
+<summary>Show code</summary>
+
+```ruby
+#django
+version: "3"  #version compose ต้องมากกว่า 3
+services:
+  web: 
+    image: chattaporn/django:v4 #image service on dockerhub
+    ports: 
+      - '8800'
+    networks:
+      - webproxy #network traefik
+    logging:
+      driver: json-file # ที่เก็บข้อมูล เก็บไว้ใน json-file
+    deploy: # set ข้อมูล deploy for swarm
+      replicas: 1
+      labels: #set ข้อมูล label เพื่อเชื่อมต่อกับ traefik
+        - traefik.docker.network=webproxy
+        - traefik.enable=true
+        - traefik.http.routers.spcn07django-https.entrypoints=websecure
+        - traefik.http.routers.spcn07django-https.rule=Host("spcn07django.xops.ipv9.xyz")
+        - traefik.http.routers.spcn07django-https.tls.certresolver=default
+        - traefik.http.services.spcn07django.loadbalancer.server.port=80
+      resources:
+        reservations:
+          cpus: '0.1'
+          memory: 10M
+        limits:
+          cpus: '0.4'
+          memory: 50M
+networks:
+  webproxy:
+    external: true
+```
+</details>
+
 
 # **4.deploy stack**
 
